@@ -62,6 +62,12 @@ input{
     outline: 0;
     padding: 18px 15px;
     margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+input:hover{
+    background-color: darkslategray;
+    transition: 0.5s;
 }
 
 .input-field label{
@@ -79,4 +85,14 @@ form p{
 form p a{
     text-decoration: none;
     color: darkslategray;
+}
+
+form p a:hover{
+    color: red;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: darkslategray;
+    transition: 0.5s;
 }
