@@ -17,7 +17,7 @@
 .form-box{
     width: 90%;
     max-width: 450px;
-    position: absolute;
+    position:fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -47,7 +47,7 @@
 }
 
 .input-field{
-    margin: 15px 15px;
+    margin: -25px;
     border-radius: 3px;
     display: block;
     text-align: center;
@@ -56,12 +56,13 @@
 }
 
 input{
-    width: 100%;
+    width: 86%;
     background:#f0e7e7;
+    color: black;
     border: 0;
     outline: 0;
     padding: 18px 15px;
-    margin-bottom: 10px;
+    margin-bottom: -60px;
     border-radius: 15px;
 }
 
@@ -70,16 +71,11 @@ input:hover{
     transition: 0.5s;
 }
 
-.input-field label{
-    margin-left:15px ;
-    color: darkslategray;
-    text-align: center;
-}
-
 form p{
     text-align: left;
     font-size: 13px;
-
+    margin-left: 46px;
+    margin-bottom: 20px;
 }
 
 form p a{
@@ -92,7 +88,25 @@ form p a:hover{
     transition: 0.5s;
 }
 
+form button{
+    margin-left: 190px;
+}
+
+.btn-field button{
+    flex-basis: 48%;
+    height: 40px;
+    background:#f0e7e7;
+    color: black;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 button:hover{
     background-color: darkslategray;
+    color: white;
     transition: 0.5s;
 }
