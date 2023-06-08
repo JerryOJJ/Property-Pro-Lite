@@ -52,7 +52,9 @@
     display: block;
     text-align: center;
     padding: 35px 35px;
-
+    max-height: 95px;
+    transition: max-height 0.5s;
+    overflow:hidden;
 }
 
 input{
@@ -88,16 +90,17 @@ form p a:hover{
     transition: 0.5s;
 }
 
-form button{
-    margin-left: 190px;
+form button.signup{
+    margin-left: 266px;
 }
 
 .btn-field button{
     flex-basis: 48%;
+    width: 100px;
     height: 40px;
     background:#f0e7e7;
     color: black;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 0;
     outline: 0;
     cursor: pointer;
@@ -108,5 +111,15 @@ form button{
 button:hover{
     background-color: darkslategray;
     color: white;
+    transition: 0.5s;
+}
+
+button.signin{
+    border: 0;
+    background-color: white;
+}
+
+button.signin:hover{
+    color: red;
     transition: 0.5s;
 }
