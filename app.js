@@ -1,4 +1,4 @@
-const form = document.getElementById('form');
+/*const form = document.getElementById('form');
 const Name = document.getElementById('Name');
 const email = document.getElementById('Email');
 const password = document.getElementById('form');
@@ -48,4 +48,5 @@ const validateInputs = () => {
         setSuccess(password);
     }
 
-};
+};*/
+
