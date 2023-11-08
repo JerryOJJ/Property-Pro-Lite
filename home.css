@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: gray;
+}
+
+header .topnav{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .topnav a{
+    color: black;
+    text-decoration: none;
+    font-size: large;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+header .topnav a:hover{
+    color: gray;
+    cursor: pointer;
+    transition: 1s;
+}
+
+header .topnav h1{
+    font-family: cursive;
+    margin-top: -15px;
+}
+
+main .picture-container{
+    background:url(https://res.cloudinary.com/ddfvaflgl/image/upload/v1699228945/homeMedia/jwmjmtatdl40yr4buiee.webp) ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+}
+
+main .picture-container h1{
+    position: absolute;
+    top: 150px;
+    left: 450px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150px;
+}
+
+main .picture-container h1:hover{
+    color: gray;
+    transition: 1s;
+}
+
+main .signin-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    padding: 150px 200px;
+    background-color: white;
+}
+
+main .signin-container-text{
+    margin-top: 90px;
+    text-align: center;
+    line-height: 40px;
+}
+
+main .signin-container-text p{
+    color: rgb(156, 154, 154);
+}
+
+main .signin-container-text button{
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: white;
+    color: gray;
+}
+
+main .signin-container-text button:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: gray;
+    transition: 1s;
+    color: white;
+}
+
+main .signin-container-pictures{
+    height: 300px;
+    overflow: hidden;
+}
+
+main .signin-container-pictures img{
+    height: 300px;
+    width: 300px;
+    opacity: 0.7;
+    transition: transform 2s ease;
+}
+
+main .signin-container-pictures:hover img{
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+main .search-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    padding: 150px 200px;
+    background-color: rgb(236, 234, 234);
+}
+
+main .search-container-input input{
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: 1px soild gray;
+    background-color: white;
+    color: gray;
+}
+
+main .search-container-input input:hover{
+    cursor: pointer;
+    border: 1px soild white;
+    background-color: gray;
+    color: white;
+}
+
+main .search-container-input input::placeholder{
+    color: black;
+}
+
+main .search-container-text{
+    text-align: center;
+    font-size: large;
+    line-height: 30px;
+}
+
+main .search-container-text p{
+    color: rgb(59, 58, 58);
+}
+
+main .last-container{
+    background-color: white;
+    margin-top: 150px;
+    padding: 150px 0;
+}
+
+main .video-container{
+    display: flex;
+    justify-content: space-around;
+}
+main .video-container .video-container-video video{
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+}
+
+main .last-container-text{
+    margin-top: 90px;
+    text-align: center;
+}
+
+main .last-container-text p{
+    color: rgb(156, 154, 154);
+}
+
+footer .footer-container{
+    margin-top: 300px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+footer .footer-container i{
+    margin-top: 25px;
+    margin-left: 10px;
+    color: black;
+}
