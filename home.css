@@ -32,6 +32,12 @@ header .topnav a:hover{
 header .topnav h1{
     font-family: cursive;
     margin-top: -15px;
+    color: rgb(167, 90, 35);
+}
+
+header .topnav h1:hover{
+    color: gray;
+    transition: 1s;
 }
 
 main .picture-container{
@@ -46,9 +52,10 @@ main .picture-container h1{
     position: absolute;
     top: 150px;
     left: 450px;
-    color: white;
+    color: rgb(167, 90, 35);
     font-family: 'Times New Roman', Times, serif;
     font-size: 150px;
+    margin-left: -40px;
 }
 
 main .picture-container h1:hover{
@@ -68,24 +75,25 @@ main .signin-container-text{
     margin-top: 90px;
     text-align: center;
     line-height: 40px;
+    color: rgb(167, 90, 35);
 }
 
 main .signin-container-text p{
-    color: rgb(156, 154, 154);
+    color: rgb(247, 179, 130);
 }
 
 main .signin-container-text button{
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid gray;
+    border: 1px solid rgb(167, 90, 35);
     background-color: white;
-    color: gray;
+    color: rgb(167, 90, 35);
 }
 
 main .signin-container-text button:hover{
     cursor: pointer;
     border: 1px solid white;
-    background-color: gray;
+    background-color: rgb(167, 90, 35);
     transition: 1s;
     color: white;
 }
@@ -118,30 +126,31 @@ main .search-container{
 main .search-container-input input{
     padding: 20px 50px;
     border-radius: 10px;
-    border: 1px soild gray;
+    border: 1px soild rgb(167, 90, 35);
     background-color: white;
-    color: gray;
+    color: rgb(167, 90, 35);
 }
 
 main .search-container-input input:hover{
     cursor: pointer;
     border: 1px soild white;
-    background-color: gray;
+    background-color: rgb(167, 90, 35);
     color: white;
 }
 
 main .search-container-input input::placeholder{
-    color: black;
+    color: white;
 }
 
 main .search-container-text{
     text-align: center;
     font-size: large;
     line-height: 30px;
+    color: rgb(167, 90, 35);
 }
 
 main .search-container-text p{
-    color: rgb(59, 58, 58);
+    color: rgb(156, 155, 154);
 }
 
 main .last-container{
@@ -163,20 +172,44 @@ main .video-container .video-container-video video{
 main .last-container-text{
     margin-top: 90px;
     text-align: center;
+    color: rgb(167, 90, 35);
 }
 
 main .last-container-text p{
-    color: rgb(156, 154, 154);
+    color: rgb(247, 179, 130);
 }
 
 footer .footer-container{
     margin-top: 300px;
     text-align: center;
     margin-bottom: 100px;
+    color: rgb(167, 90, 35);
 }
 
 footer .footer-container i{
     margin-top: 25px;
     margin-left: 10px;
-    color: black;
+    color: white;
+}
+
+@media screen and (max-device-width: 1024px){
+    main .picture-container h1{
+        font-size: 100px;
+        margin-left: -210px;
+    }
+
+    main .signin-container-text{
+        line-height: normal;
+    }
+
+    main .signin-container-pictures .none{
+        display: none;
+    }
+    main .signin-container-pictures .right{
+        margin-left: 5px;
+    }
+
+    main .search-container-text{
+        line-height: normal;
+    }
 }
