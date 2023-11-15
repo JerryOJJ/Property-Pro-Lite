@@ -9,6 +9,43 @@ body{
     background-color: gray;
 }
 
+.topnav-1 {
+    display: none;
+    overflow: hidden;
+    background-color: rgb(167, 90, 35);
+    position: relative;
+  }
+
+  .topnav-1 #myLinks {
+    display: none;
+  }
+  
+  .topnav-1 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav-1 a.icon {
+    margin-top: 10px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav-1 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active-1 {
+    background-color: transparent;
+    color: white;
+  }
+
 header .topnav{
     background-color: white;
     display: flex;
@@ -63,6 +100,58 @@ main .picture-container h1:hover{
     transition: 1s;
 }
 
+main .signin-container-smaller{
+    display: none;
+    margin-top: 150px;
+    padding: 150px 200px;
+    background-color: white;
+}
+
+main .signin-container-smaller-text{
+    margin-top: 90px;
+    text-align: center;
+    line-height: 40px;
+    color: rgb(167, 90, 35);
+}
+
+
+main .signin-container-smaller-text p{
+    color: rgb(247, 179, 130);
+}
+
+main .signin-container-smaller-text button{
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(167, 90, 35);
+    background-color: white;
+    color: rgb(167, 90, 35);
+}
+
+main .signin-container-smaller-text button:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: rgb(167, 90, 35);
+    transition: 1s;
+    color: white;
+}
+
+main .signin-container-smaller-pictures{
+    height: 300px;
+    overflow: hidden;
+}
+
+main .signin-container-smaller-pictures img{
+    height: 300px;
+    width: 300px;
+    opacity: 0.7;
+    transition: transform 2s ease;
+}
+
+main .signin-container-smaller-pictures:hover img{
+    transform: scale(1.5);
+    opacity: 1;
+}
+
 main .signin-container{
     display: flex;
     justify-content: space-between;
@@ -77,6 +166,7 @@ main .signin-container-text{
     line-height: 40px;
     color: rgb(167, 90, 35);
 }
+
 
 main .signin-container-text p{
     color: rgb(247, 179, 130);
@@ -212,4 +302,48 @@ footer .footer-container i{
     main .search-container-text{
         line-height: normal;
     }
+}
+
+@media screen and (max-device-width: 768px){
+    body{
+        background-color: rgb(167, 90, 35);
+    }
+
+    header{
+        display: none;
+    }
+
+    .topnav-1{
+        display: block;
+    }
+
+    main .picture-container h1{
+        margin-left: -310px;
+    }
+
+    main .signin-container-smaller{
+        display: block;
+    }
+
+    main .signin-container-smaller-pictures img{
+        margin-left: 35px;
+    }
+
+    main .signin-container{
+        display: none;
+    }
+
+    main .search-container{
+        display: block;
+    }
+
+    main .search-container-text{
+        margin-top: 35px;
+        text-align: left;
+    }
+
+    footer .footer-container{
+        color: black;
+    }
+
 }
