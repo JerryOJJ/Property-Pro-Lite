@@ -347,3 +347,13 @@ footer .footer-container i{
     }
 
 }
+@media screen and (max-device-width: 425px){
+    main .picture-container h1{
+        margin-left: -370px;
+        font-size: 50px;
+    }
+
+    main .search-container-input input{
+        padding: 0;
+    }
+}
