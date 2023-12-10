@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing:border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url(media/construction-01.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+}
+
+.header .headerlinks a{
+    margin-left: 5px;
+}
+
+.header .logo h1{
+    margin-right: 125px;
+}
+
+.header .userinfo{
+    display: block;
+}
+
+.main .advert1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main .advert2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main .advert3{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main .main-subtitle{
+    color: white;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.main .advertbox{
+    margin-top: 100px;
+    border: 1px solid rgb(146, 144, 144);
+    width: 550px;
+    height: 600px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.main .advertbox img{
+    width: 500px;
+    height: 400px;
+    margin-top: 30px;
+}
+
+.main .advertbox .advertbox-text{
+    color: white;
+    opacity: 0.7;
+}
+
+.main .advertbox .advertbox-text span{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.main .advertbox .advertbox-text span i{
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.main .advertbox button{
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+.main .advertbox button:hover{
+    cursor: pointer;
+}
+
+.main .advertbox .sold button{
+    color: green;
+    margin-right: 50px;
+}
+
+.main .advertbox .update button{
+    color: yellow;
+}
+
+.main .advertbox .delete button{
+    color: red;
+    margin-left: 50px;
+}
