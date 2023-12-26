@@ -83,15 +83,18 @@
         </div>
       </div>
       <div class="search-container" id="search">
-        <div class="search-container-input">
+        <div class="search-container-select">
           <h2>Search:</h2>
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Enter a specific type"
-          />
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <select name="search" id="search">
+            <option value disabled selected>Property Type</option>
+            <option value="miniflat">Miniflat</option>
+            <option value="2bed">2 Bedroom</option>
+            <option value="3bed">3 Bedroom</option>
+            <option value="4bed">4 Bedroom</option>
+          </select>
+          <a href="#">
+            <i class="fa-solid fa-magnifying-glass" style="color: black"></i>
+          </a>
         </div>
         <div class="search-container-text">
           <h2>Find a home</h2>

@@ -13,7 +13,7 @@ body {
 .topnav-1 {
   display: none;
   overflow: hidden;
-  background-color: rgb(167, 90, 35);
+  background-color: rgb(40, 63, 70);
   position: relative;
 }
 
@@ -106,25 +106,25 @@ main .signin-container-smaller-text {
   margin-top: 90px;
   text-align: center;
   line-height: 40px;
-  color: rgb(167, 90, 35);
+  color: rgb(40, 63, 70);
 }
 
 main .signin-container-smaller-text p {
-  color: rgb(247, 179, 130);
+  color: rgb(156, 155, 154);
 }
 
 main .signin-container-smaller-text button {
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid rgb(167, 90, 35);
+  border: 1px solid rgb(40, 63, 70);
   background-color: white;
-  color: rgb(167, 90, 35);
+  color: rgb(40, 63, 70);
 }
 
 main .signin-container-smaller-text button:hover {
   cursor: pointer;
   border: 1px solid white;
-  background-color: rgb(167, 90, 35);
+  background-color: rgb(40, 63, 70);
   transition: 1s;
   color: white;
 }
@@ -204,22 +204,10 @@ main .search-container {
   background-color: whitesmoke;
 }
 
-main .search-container-input input {
-  padding: 20px 50px;
-  border-radius: 10px;
-  border: 1px soild rgb(167, 90, 35);
-  background-color: white;
-  color: rgb(167, 90, 35);
-}
-
-main .search-container-input input:hover {
-  cursor: pointer;
-  border: 1px soild white;
-  background-color: rgb(167, 90, 35);
-  color: white;
-}
-
-main .search-container-input input::placeholder {
+main .search-container-select select {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgb(40, 63, 70);
   color: white;
 }
 
@@ -236,7 +224,6 @@ main .search-container-text p {
 
 main .last-container {
   background-color: white;
-  margin-top: 150px;
   padding: 150px 0;
 }
 
@@ -253,24 +240,24 @@ main .video-container .video-container-video video {
 main .last-container-text {
   margin-top: 90px;
   text-align: center;
-  color: rgb(167, 90, 35);
+  color: rgb(40, 63, 70);
 }
 
 main .last-container-text p {
-  color: rgb(247, 179, 130);
+  color: rgb(156, 155, 154);
 }
 
 footer .footer-container {
   margin-top: 300px;
   text-align: center;
   margin-bottom: 100px;
-  color: rgb(167, 90, 35);
+  color: rgb(40, 63, 70);
 }
 
 footer .footer-container i {
   margin-top: 25px;
   margin-left: 10px;
-  color: white;
+  color: rgb(40, 63, 70);
 }
 
 @media screen and (max-device-width: 1024px) {
@@ -297,7 +284,7 @@ footer .footer-container i {
 
 @media screen and (max-device-width: 768px) {
   body {
-    background-color: rgb(167, 90, 35);
+    background-color: rgb(40, 63, 70);
   }
 
   header {
@@ -334,7 +321,11 @@ footer .footer-container i {
   }
 
   footer .footer-container {
-    color: black;
+    color: white;
+  }
+
+  footer .footer-container i {
+    color: white;
   }
 }
 @media screen and (max-device-width: 425px) {
