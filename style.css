@@ -9,7 +9,7 @@
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(40, 63, 70, 0.8), rgba(0, 0, 0, 0.8)),
-    url(pictures/land.jfif);
+    url(https://res.cloudinary.com/duhhtmu59/image/upload/v1703888775/pictures/land_tbqjmk.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -19,7 +19,7 @@
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(40, 63, 70, 0.8), rgba(0, 0, 0, 0.8)),
-    url(pictures/land2.jpg);
+    url(https://res.cloudinary.com/duhhtmu59/image/upload/v1703888849/pictures/land2_ufkhqg.png);
   background-position: center;
   background-size: cover;
   position: relative;

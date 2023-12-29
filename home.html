@@ -25,7 +25,7 @@
         <a href="#sold">Sold</a>
         <a href="SignUp.html">SignUp</a>
       </div>
-      <a href="javascript:void(0);" class="icon" onclick="hamFunction()">
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
@@ -85,9 +85,11 @@
       <div class="search-container" id="search">
         <div class="search-container-select">
           <h2>Search:</h2>
-          <select name="search" id="search">
+          <select name="search" id="SelectOption">
             <option value disabled selected>Property Type</option>
-            <option value="miniflat">Miniflat</option>
+            <option value="miniflat">
+              <a href="miniflat.html">Miniflat</a>
+            </option>
             <option value="2bed">2 Bedroom</option>
             <option value="3bed">3 Bedroom</option>
             <option value="4bed">4 Bedroom</option>

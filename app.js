@@ -1,3 +1,5 @@
+"use strict";
+
 /*const form = document.getElementById('form');
 const Name = document.getElementById('Name');
 const email = document.getElementById('Email');
