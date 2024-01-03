@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PropertyPro-lite</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h3 class="title">Post An Property Advert</h3>
+        <form class="form">
+          <label class="input-field">
+            Add Property Image
+            <input type="file" class="image" required />
+          </label>
+          <label class="input-field">
+            Add Property Name
+            <input type="text" class="text" required />
+          </label>
+          <label class="input-field">
+            Add property Location
+            <input type="text" class="text" required />
+          </label>
+          <label class="input-field">
+            Add property price
+            <input type="text" class="text" required />
+          </label>
+          <label class="input-field">
+            Choose bedroom amount
+            <select name="bedroom" class="bedroom">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+          <div class="btn-field">
+            <button class="signup" type="submit" class="SignupBtn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script defer src="app.js"></script>
+  </body>
+</html>
