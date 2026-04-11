@@ -5,97 +5,278 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image:
     linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
     url(../media/construction-01.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
+
+/* ============ HEADER ============ */
 
 .header {
   display: flex;
   justify-content: space-between;
-  opacity: 0.7;
-  margin-top: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: clamp(0.5rem, 2vw, 1rem);
+  opacity: 0.9;
 }
 
 .header a {
   text-decoration: none;
   color: white;
+  transition: 0.3s;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.header a:hover {
+  color: #ddd;
+}
+
+.header .logo {
+  flex: 1;
+  min-width: 150px;
 }
 
 .header .logo h1 {
-  margin-right: 125px;
+  font-size: clamp(24px, 5vw, 32px);
+  color: white;
+  margin: 0;
 }
 
 .header .userinfo {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header .userinfo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header .userinfo p {
+  color: white;
+  margin: 0;
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+/* ============ MAIN CONTENT ============ */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 5vw, 3rem);
+  width: 100%;
 }
 
 .main .miniflat-main-subtitle {
   color: white;
-  opacity: 0.7;
+  opacity: 0.8;
   text-align: center;
-  padding-top: 50px;
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
+/* ============ ADVERT BOX ============ */
+
 .main .miniflat-advertbox {
-  margin-top: 100px;
+  width: 100%;
+  max-width: 550px;
   border: 1px solid rgb(146, 144, 144);
-  width: 550px;
-  height: 600px;
+  background: rgba(0, 0, 0, 0.3);
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.main .miniflat-advertbox:hover {
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .main .miniflat-advertbox img {
-  width: 500px;
-  height: 400px;
-  margin-top: 30px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  margin: 1rem 0;
+  border-radius: 10px;
 }
 
 .main .miniflat-advertbox .miniflat-advertbox-text {
   color: white;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .main .miniflat-advertbox .miniflat-advertbox-text span {
   display: flex;
-  margin-top: 15px;
-  margin-left: 25px;
+  align-items: center;
+  margin: 1rem clamp(0.5rem, 2vw, 1.5rem);
+  gap: 0.5rem;
+}
+
+.main .miniflat-advertbox .miniflat-advertbox-text span p {
+  font-size: clamp(12px, 2vw, 14px);
+  margin: 0;
+}
+
+.main .miniflat-advertbox .miniflat-advertbox-text span h2 {
+  font-size: clamp(16px, 3vw, 20px);
+  margin: 0;
 }
 
 .main .miniflat-advertbox .miniflat-advertbox-text span i {
-  margin-top: 8px;
-  margin-right: 8px;
+  font-size: clamp(16px, 3vw, 24px);
+  flex-shrink: 0;
 }
+
+/* ============ BUTTONS ============ */
 
 .main .miniflat-advertbox button {
   background-color: transparent;
   border: none;
-  margin-top: 20px;
-  font-size: larger;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0.25rem;
 }
 
 .main .miniflat-advertbox button:hover {
-  cursor: pointer;
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.main .miniflat-advertbox button:active {
+  transform: scale(0.95);
 }
 
 .main .miniflat-advertbox .buy button {
-  color: green;
-  margin-right: 50px;
+  color: #4caf50;
 }
 
 .main .miniflat-advertbox .rent button {
-  color: yellow;
+  color: #ffeb3b;
 }
 
 .main .miniflat-advertbox .flag button {
-  color: red;
-  margin-left: 50px;
+  color: #f44336;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* ============ RESPONSIVE TABLET (768px and down) ============ */
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .header .logo h1 {
+    font-size: 24px;
+  }
+
+  .main {
+    padding: 1.5rem;
+  }
+
+  .main .miniflat-main-subtitle {
+    font-size: 28px;
+    margin-bottom: 1.5rem;
+  }
+
+  .main .miniflat-advertbox {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .main .miniflat-advertbox img {
+    max-width: 100%;
+  }
+
+  .main .miniflat-advertbox button {
+    font-size: 16px;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* ============ RESPONSIVE MOBILE (425px and down) ============ */
+
+@media screen and (max-width: 425px) {
+  body {
+    min-height: auto;
+  }
+
+  .header {
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header .logo h1 {
+    font-size: 20px;
+  }
+
+  .header .userinfo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .main .miniflat-main-subtitle {
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+
+  .main .miniflat-advertbox {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .main .miniflat-advertbox .miniflat-advertbox-text span {
+    margin: 0.75rem;
+  }
+
+  .main .miniflat-advertbox button {
+    font-size: 14px;
+    padding: 0.5rem 0.5rem;
+    margin: 0.2rem;
+  }
 }

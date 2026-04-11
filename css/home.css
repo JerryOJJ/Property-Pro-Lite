@@ -1,14 +1,21 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: white;
 }
+
+/* ============ NAVIGATION ============ */
 
 .topnav-1 {
   display: none;
@@ -21,272 +28,402 @@ body {
   display: none;
 }
 
+.topnav-1 #myLinks.responsive {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .topnav-1 a {
   color: white;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
   display: block;
+  transition: 0.3s;
 }
 
 .topnav-1 a.icon {
-  margin-top: 10px;
-  display: block;
   position: absolute;
   right: 0;
   top: 0;
+  padding: 14px 16px;
+  cursor: pointer;
 }
 
 .topnav-1 a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #555;
+  color: white;
 }
 
 .active-1 {
   background-color: transparent;
   color: white;
+  font-weight: bold;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .topnav {
   background-color: white;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 header .topnav a {
   color: black;
   text-decoration: none;
-  font-size: large;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  font-size: clamp(14px, 2vw, 18px);
+  padding: 0.5rem 1rem;
+  transition: 0.3s;
 }
 
 header .topnav a:hover {
   color: rgb(40, 63, 70);
   cursor: pointer;
+  border-bottom: 2px solid rgb(40, 63, 70);
 }
 
 header .topnav h1 {
   font-family: cursive;
-  margin-top: -15px;
   color: rgb(40, 63, 70);
+  font-size: clamp(20px, 4vw, 32px);
+  margin: 0.5rem 0;
 }
+
+/* ============ HERO SECTION ============ */
 
 main .picture-container {
   background: url(https://res.cloudinary.com/ddfvaflgl/image/upload/v1699228945/homeMedia/jwmjmtatdl40yr4buiee.webp);
   background-position: center;
   background-size: cover;
   position: relative;
-  height: 500px;
+  height: clamp(250px, 60vw, 500px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main .picture-container h1 {
-  position: absolute;
-  top: 150px;
-  left: 485px;
   color: rgb(40, 63, 70);
   font-family: "Times New Roman", Times, serif;
-  font-size: 150px;
-  margin-left: -40px;
+  font-size: clamp(48px, 15vw, 150px);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 
 main .picture-container h1:hover {
   color: gray;
+  transform: scale(1.05);
   transition: 1s;
 }
 
+/* ============ SIGNIN CONTAINERS ============ */
+
+/* main .signin-container-smaller {
+  display: none;
+  padding: clamp(2rem, 5vw, 150px) clamp(1rem, 10vw, 200px);
+  background-color: white;
+} */
+
 main .signin-container-smaller {
   display: none;
-  margin-top: 150px;
-  padding: 150px 200px;
-  background-color: white;
+  padding: clamp(2rem, 5vw, 150px) clamp(1rem, 10vw, 200px);
+  flex-direction: column;
+  gap: 2rem;
 }
 
 main .signin-container-smaller-text {
-  margin-top: 90px;
   text-align: center;
-  line-height: 40px;
+  line-height: 1.6;
   color: rgb(40, 63, 70);
+}
+
+main .signin-container-smaller-text h2 {
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 1rem;
 }
 
 main .signin-container-smaller-text p {
   color: rgb(156, 155, 154);
+  font-size: clamp(14px, 3vw, 18px);
+  margin-bottom: 1.5rem;
 }
 
 main .signin-container-smaller-text button {
-  padding: 20px;
+  padding: clamp(12px, 3vw, 20px) clamp(24px, 5vw, 40px);
   border-radius: 10px;
-  border: 1px solid rgb(40, 63, 70);
+  border: 2px solid rgb(40, 63, 70);
   background-color: white;
   color: rgb(40, 63, 70);
+  font-size: clamp(14px, 2vw, 16px);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 main .signin-container-smaller-text button:hover {
-  cursor: pointer;
-  border: 1px solid white;
   background-color: rgb(40, 63, 70);
-  transition: 1s;
   color: white;
+  transform: translateY(-2px);
 }
 
 main .signin-container-smaller-pictures {
-  height: 300px;
+  height: clamp(200px, 50vw, 300px);
   overflow: hidden;
+  border-radius: 15px;
 }
 
 main .signin-container-smaller-pictures img {
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   opacity: 0.7;
   transition: transform 2s ease;
 }
 
 main .signin-container-smaller-pictures:hover img {
-  transform: scale(1.5);
+  transform: scale(1.1);
   opacity: 1;
 }
 
 main .signin-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 150px 200px;
+  padding: clamp(2rem, 5vw, 150px) clamp(1rem, 10vw, 200px);
   background-color: white;
+  gap: 2rem;
 }
 
 main .signin-container-text {
-  margin-top: 90px;
+  flex: 1;
+  min-width: 250px;
   text-align: center;
-  line-height: 40px;
+  line-height: 1.6;
   color: rgb(40, 63, 70);
+}
+
+main .signin-container-text h2 {
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 1rem;
 }
 
 main .signin-container-text p {
   color: rgb(97, 99, 100);
+  font-size: clamp(14px, 2vw, 16px);
+  margin-bottom: 1.5rem;
 }
 
 main .signin-container-text button {
-  padding: 20px;
+  padding: clamp(12px, 2vw, 20px) clamp(24px, 5vw, 40px);
   border-radius: 10px;
-  border: 1px solid rgb(40, 63, 70);
+  border: 2px solid rgb(40, 63, 70);
   background-color: white;
   color: rgb(40, 63, 70);
+  font-size: clamp(14px, 2vw, 16px);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 main .signin-container-text button:hover {
-  cursor: pointer;
-  border: 1px solid white;
   background-color: rgb(40, 63, 70);
-  transition: 1s;
   color: white;
+  transform: translateY(-2px);
 }
 
 main .signin-container-pictures {
-  height: 300px;
+  flex: 0 1 calc(33.333% - 1rem);
+  min-width: 200px;
+  height: clamp(200px, 40vw, 300px);
   overflow: hidden;
+  border-radius: 15px;
 }
 
 main .signin-container-pictures img {
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   opacity: 0.7;
   transition: transform 2s ease;
 }
 
 main .signin-container-pictures:hover img {
-  transform: scale(1.5);
+  transform: scale(1.1);
   opacity: 1;
+}
+
+main .signin-container-pictures.none {
+  display: none;
 }
 
 main .search-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 150px 200px;
+  padding: clamp(2rem, 5vw, 150px) clamp(1rem, 10vw, 200px);
   background-color: whitesmoke;
+  gap: 2rem;
+  align-items: center;
+}
+
+main .search-container-select {
+  flex: 1;
+  min-width: 250px;
+}
+
+main .search-container-select h2 {
+  font-size: clamp(20px, 4vw, 28px);
+  color: rgb(40, 63, 70);
+  margin-bottom: 1rem;
 }
 
 main .search-container-select select {
-  padding: 15px;
+  width: 100%;
+  padding: clamp(10px, 2vw, 15px);
   border-radius: 15px;
   background-color: rgb(40, 63, 70);
   color: white;
+  font-size: clamp(14px, 2vw, 16px);
+  border: none;
+  cursor: pointer;
+}
+
+main .search-container select:focus {
+  outline: 2px solid rgb(100, 120, 130);
+}
+
+main .search-container a {
+  color: black;
+  font-size: clamp(18px, 5vw, 24px);
+  cursor: pointer;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+main .search-container a:hover {
+  color: rgb(40, 63, 70);
 }
 
 main .search-container-text {
+  flex: 1;
+  min-width: 250px;
   text-align: center;
-  font-size: large;
-  line-height: 30px;
+  font-size: clamp(16px, 3vw, 20px);
+  line-height: 1.6;
   color: rgb(40, 63, 70);
+}
+
+main .search-container-text h2 {
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 1rem;
 }
 
 main .search-container-text p {
   color: rgb(156, 155, 154);
+  font-size: clamp(14px, 2vw, 16px);
 }
 
 main .last-container {
   background-color: white;
-  padding: 150px 0;
+  padding: clamp(2rem, 5vw, 150px) 0;
 }
 
 main .video-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 2rem;
+  padding: 0 clamp(1rem, 5vw, 50px);
 }
-main .video-container .video-container-video video {
+
+main .video-container-video {
+  flex: 1;
+  min-width: 250px;
+}
+
+main .video-container-video video {
   width: 100%;
-  height: 200px;
-  border-radius: 50px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  object-fit: cover;
 }
 
 main .last-container-text {
-  margin-top: 90px;
   text-align: center;
+  margin-top: 2rem;
   color: rgb(40, 63, 70);
+}
+
+main .last-container-text h2 {
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 1rem;
 }
 
 main .last-container-text p {
   color: rgb(156, 155, 154);
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+footer {
+  background-color: #f5f5f5;
 }
 
 footer .footer-container {
-  margin-top: 300px;
+  margin-top: 2rem;
+  padding: 2rem;
   text-align: center;
-  margin-bottom: 100px;
   color: rgb(40, 63, 70);
+}
+
+footer .footer-container h3 {
+  font-size: clamp(16px, 3vw, 20px);
+  margin-bottom: 1rem;
 }
 
 footer .footer-container i {
-  margin-top: 25px;
-  margin-left: 10px;
+  margin: 0.25rem 0.5rem;
+  font-size: clamp(16px, 3vw, 24px);
   color: rgb(40, 63, 70);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-@media screen and (max-device-width: 1024px) {
-  main .picture-container h1 {
-    font-size: 100px;
-    margin-left: -210px;
-  }
+footer .footer-container i:hover {
+  transform: scale(1.2);
+}
 
-  main .signin-container-text {
-    line-height: normal;
-  }
+/* ============ TABLET & DESKTOP (1024px+) ============ */
+@media screen and (max-width: 1024px) {
+main .signin-container-smaller {
+  display: flex;
+  padding: clamp(2rem, 5vw, 150px) clamp(1rem, 10vw, 200px);
+  flex-direction: column;
+  gap: 2rem;
+}
 
-  main .signin-container-pictures .none {
+  main .signin-container {
     display: none;
   }
-  main .signin-container-pictures .right {
-    margin-left: 5px;
-  }
 
-  main .search-container-text {
-    line-height: normal;
+  main .signin-container-pictures {
+    flex-basis: calc(50% - 1rem);
   }
 }
 
-@media screen and (max-device-width: 768px) {
-  body {
-    background-color: rgb(40, 63, 70);
-  }
-
+/* ============ TABLET (768px - 1023px) ============ */
+@media screen and (max-width: 768px) {
   header {
     display: none;
   }
@@ -295,46 +432,72 @@ footer .footer-container i {
     display: block;
   }
 
-  main .picture-container h1 {
-    margin-left: -310px;
+  .topnav-1 #myLinks {
+    display: none;
+  }
+
+  .topnav-1 #myLinks.responsive {
+    display: flex;
   }
 
   main .signin-container-smaller {
-    display: block;
-  }
-
-  main .signin-container-smaller-pictures img {
-    margin-left: 35px;
+    display: flex !important;
   }
 
   main .signin-container {
     display: none;
   }
 
-  main .search-container {
-    display: block;
+  main .signin-container-smaller {
+    padding: 2rem 1rem;
   }
 
-  main .search-container-text {
-    margin-top: 35px;
-    text-align: left;
+  main .search-container {
+    flex-direction: column;
+  }
+
+  main .last-container {
+    padding: 2rem 1rem;
+  }
+
+  main .video-container {
+    flex-direction: column;
+  }
+}
+
+/* ============ MOBILE (425px - 767px) ============ */
+@media screen and (max-width: 425px) {
+  header .topnav {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  header .topnav a {
+    padding: 0.25rem 0.5rem;
+    font-size: 12px;
+  }
+
+  main .picture-container h1 {
+    font-size: clamp(32px, 12vw, 72px);
+  }
+
+  main .signin-container-smaller-pictures {
+    width: 100%;
+  }
+
+  main .search-container {
+    padding: 1rem;
+  }
+
+  main .search-container-select select {
+    font-size: 14px;
+  }
+
+  main .last-container {
+    padding: 1rem;
   }
 
   footer .footer-container {
-    color: white;
-  }
-
-  footer .footer-container i {
-    color: white;
-  }
-}
-@media screen and (max-device-width: 425px) {
-  main .picture-container h1 {
-    margin-left: -370px;
-    font-size: 50px;
-  }
-
-  main .search-container-input input {
-    padding: 0;
+    padding: 1rem;
   }
 }
