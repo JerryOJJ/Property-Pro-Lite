@@ -1,0 +1,384 @@
+.text-responsive-sm {
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+.text-responsive-base {
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+.text-responsive-lg {
+  font-size: clamp(16px, 3vw, 20px);
+}
+
+.text-responsive-xl {
+  font-size: clamp(20px, 4vw, 28px);
+}
+
+.text-responsive-2xl {
+  font-size: clamp(24px, 5vw, 36px);
+}
+
+.p-responsive {
+  padding: clamp(1rem, 5vw, 2rem);
+}
+
+.p-responsive-sm {
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.m-responsive {
+  margin: clamp(1rem, 5vw, 2rem);
+}
+
+.gap-responsive {
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.container-responsive {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 2rem);
+}
+
+.container-sm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 2rem);
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.grid-responsive-lg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.grid-responsive-sm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.img-responsive {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+img.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img.img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+picture {
+  display: block;
+}
+
+.btn-responsive {
+  padding: clamp(10px, 2vw, 15px) clamp(16px, 4vw, 32px);
+  font-size: clamp(14px, 2vw, 16px);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.btn-responsive:hover {
+  transform: translateY(-2px);
+}
+
+.btn-responsive:active {
+  transform: translateY(0);
+}
+
+.btn-responsive:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.form-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: clamp(10px, 2vw, 12px) clamp(12px, 2vw, 16px);
+  font-size: clamp(14px, 2vw, 16px);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: darkslategray;
+  box-shadow: 0 0 0 3px rgba(47, 79, 79, 0.1);
+}
+
+.card-responsive {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-responsive:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.card-body {
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 48px);
+}
+
+h2 {
+  font-size: clamp(24px, 5vw, 36px);
+}
+
+h3 {
+  font-size: clamp(20px, 4vw, 28px);
+}
+
+h4 {
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+h5 {
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+h6 {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.focus-visible:focus {
+  outline: 2px solid darkslategray;
+  outline-offset: 2px;
+}
+
+button,
+a[role="button"],
+input[type="button"],
+input[type="submit"],
+select,
+textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.mt-responsive {
+  margin-top: clamp(1rem, 5vw, 2rem);
+}
+
+.mb-responsive {
+  margin-bottom: clamp(1rem, 5vw, 2rem);
+}
+
+.pt-responsive {
+  padding-top: clamp(1rem, 5vw, 2rem);
+}
+
+.pb-responsive {
+  padding-bottom: clamp(1rem, 5vw, 2rem);
+}
+
+.shadow-responsive {
+  box-shadow: 0 clamp(2px, 0.5vw, 8px) clamp(4px, 1vw, 16px) rgba(0, 0, 0, 0.1);
+}
+
+.rounded-responsive {
+  border-radius: clamp(8px, 2vw, 16px);
+}
+
+@media screen and (min-width: 1024px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  button,
+  a[role="button"],
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .p-responsive {
+    padding: clamp(0.75rem, 3vw, 1.5rem);
+  }
+
+  .gap-responsive {
+    gap: clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hide-small-mobile {
+    display: none !important;
+  }
+
+  .flex-responsive {
+    flex-direction: column;
+  }
+
+  .grid-responsive,
+  .grid-responsive-lg,
+  .grid-responsive-sm {
+    grid-template-columns: 1fr;
+  }
+
+  .container-responsive,
+  .container-sm {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  * {
+    transition-duration: 0.15s !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #bb86fc;
+  }
+
+  .card-responsive {
+    background: #1e1e1e;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  }
+
+  .card-responsive:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
